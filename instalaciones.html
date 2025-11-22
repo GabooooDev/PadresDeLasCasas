@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones - Liceo Padre de las Casas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/instalaciones.css">
+</head>
+<body>
+    <section class="carrusel">
+        <div class="carrusel-imagenes">
+            <div class="carrusel-item active">
+                <img src="img/Inicio/1.jpeg" alt="Imagen Liceo 1">
+            </div>
+            <div class="carrusel-item">
+                <img src="img/Inicio/2.jpeg" alt="Imagen Liceo 2">
+            </div>
+            <div class="carrusel-item">
+                <img src="img/Inicio/3.png" alt="Imagen Liceo 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Franja superior con texto animado -->
+    <div class="franja-superior">
+        <div class="texto-animado">
+            <div class="titulo-movil">
+                INSTALACIONES DEL LICEO PADRE DE LAS CASAS
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-link">INICIO</a>
+                <a href="quienes-somos.html" class="nav-link">¿QUIÉNES SOMOS?</a>
+                <a href="actividades-escolares.html" class="nav-link">ACTIVIDADES ESCOLARES</a> 
+            </div>
+
+            <div class="nav-wrapper">
+                <img src="img/0.webp" alt="Logo Liceo Padre de las Casas" class="central-logo">
+            </div>
+            
+            <div class="nav-links-right">
+                <a href="instalaciones.html" class="nav-link">INSTALACIONES</a>
+                <a href="admision.html" class="nav-link">ADMISIÓN</a>
+                <a href="contacto.html" class="nav-link">CONTACTO</a>
+                <a href="ayuda.html" class="nav-link">AYUDA</a>
+            </div>
+            
+            <!-- Menú hamburguesa para móviles -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div> 
+        
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">INICIO</a>
+            <a href="quienes-somos.html" class="mobile-nav-link">¿QUIÉNES SOMOS?</a>
+            <a href="actividades-escolares.html" class="mobile-nav-link">ACTIVIDADES ESCOLARES</a>
+            <a href="instalaciones.html" class="mobile-nav-link">INSTALACIONES</a>
+            <a href="admision.html" class="mobile-nav-link">ADMISIÓN</a>
+            <a href="contacto.html" class="mobile-nav-link">CONTACTO</a>
+            <a href="ayuda.html" class="mobile-nav-link">AYUDA</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <h1 class="titulo-instalaciones">Nuestras Instalaciones</h1>
+        
+        <p class="descripcion-instalaciones">
+            El Liceo Padre de las Casas cuenta con instalaciones modernas y equipadas para ofrecer 
+            una educación integral de calidad. Nuestros espacios están diseñados para fomentar 
+            el aprendizaje, la creatividad y el desarrollo de nuestros estudiantes en un ambiente seguro y estimulante.
+        </p>
+        
+        <!-- Filtros de categoría -->
+        <div class="filtros-categoria">
+            <button class="filtro-btn active" data-categoria="todas">Todas</button>
+            <button class="filtro-btn" data-categoria="aulas">Aulas</button>
+            <button class="filtro-btn" data-categoria="deportes">Deportes</button>
+            <button class="filtro-btn" data-categoria="tecnologia">Tecnología</button>
+            <button class="filtro-btn" data-categoria="cultura">Cultura</button>
+            <button class="filtro-btn" data-categoria="servicios">Servicios</button>
+        </div>
+        
+        <!-- Galería de instalaciones -->
+        <div class="galeria-instalaciones">
+            <!-- Aula de Clases -->
+            <div class="tarjeta-instalacion" data-categoria="aulas">
+                <img src="img/Intalaciones/auladeclases.jpeg" alt="Aula de Clases" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Aulas de Clases</h3>
+                    <p class="descripcion-instalacion">
+                        Espacios amplios y bien iluminados, equipados con tecnología educativa 
+                        para un aprendizaje óptimo.
+                    </p>
+                    <span class="etiqueta-categoria">Aulas</span>
+                </div>
+            </div>
+            
+            <!-- Biblioteca -->
+            <div class="tarjeta-instalacion" data-categoria="cultura">
+                <img src="img/Intalaciones/biblioteca.jpeg" alt="Biblioteca" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Biblioteca</h3>
+                    <p class="descripcion-instalacion">
+                        Amplia colección de libros, áreas de estudio individual y grupal, 
+                        y recursos digitales para investigación.
+                    </p>
+                    <span class="etiqueta-categoria">Cultura</span>
+                </div>
+            </div>
+            
+            <!-- Laboratorio de Informática -->
+            <div class="tarjeta-instalacion" data-categoria="tecnologia">
+                <img src="img/Intalaciones/Laboratoriodeinformatica.jpeg" alt="Laboratorio de Informática" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Laboratorio de Informática</h3>
+                    <p class="descripcion-instalacion">
+                        Equipado con computadoras de última generación y software educativo 
+                        para el desarrollo de habilidades tecnológicas.
+                    </p>
+                    <span class="etiqueta-categoria">Tecnología</span>
+                </div>
+            </div>
+            
+            <!-- Cancha Deportiva -->
+            <div class="tarjeta-instalacion" data-categoria="deportes">
+                <img src="img/Intalaciones/canchadeportiva.jpeg" alt="Cancha Deportiva" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Cancha Deportiva</h3>
+                    <p class="descripcion-instalacion">
+                        Espacio multiusos para fútbol, baloncesto y voleibol, con iluminación 
+                        para actividades vespertinas.
+                    </p>
+                    <span class="etiqueta-categoria">Deportes</span>
+                </div>
+            </div>
+            
+            <!-- Comedor -->
+            <div class="tarjeta-instalacion" data-categoria="servicios">
+                <img src="img/Intalaciones/Comedor.jpeg" alt="Comedor" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Comedor Escolar</h3>
+                    <p class="descripcion-instalacion">
+                        Espacio higiénico y acogedor donde los estudiantes pueden disfrutar 
+                        de alimentos nutritivos y balanceados.
+                    </p>
+                    <span class="etiqueta-categoria">Servicios</span>
+                </div>
+            </div>
+            
+            <!-- Laboratorio de Ciencias -->
+            <div class="tarjeta-instalacion" data-categoria="tecnologia">
+                <img src="img/Intalaciones/Laboraoriodeciencias.jpeg" alt="Laboratorio de Ciencias" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Laboratorio de Ciencias</h3>
+                    <p class="descripcion-instalacion">
+                        Equipado para experimentos de física, química y biología, 
+                        fomentando el aprendizaje práctico y la investigación.
+                    </p>
+                    <span class="etiqueta-categoria">Tecnología</span>
+                </div>
+            </div>
+            
+            <!-- Patio de Recreo -->
+            <div class="tarjeta-instalacion" data-categoria="deportes">
+                <img src="img/Intalaciones/patioderecreo.png" alt="Patio de Recreo" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Patio de Recreo</h3>
+                    <p class="descripcion-instalacion">
+                        Amplio espacio al aire libre para el esparcimiento y actividades 
+                        recreativas durante los descansos.
+                    </p>
+                    <span class="etiqueta-categoria">Deportes</span>
+                </div>
+            </div>
+            
+            <!-- Sala de Profesores -->
+            <div class="tarjeta-instalacion" data-categoria="servicios">
+                <img src="img/Intalaciones/Saladeprofesores.jpeg" alt="Sala de Profesores" class="imagen-instalacion">
+                <div class="info-instalacion">
+                    <h3 class="nombre-instalacion">Sala de Profesores</h3>
+                    <p class="descripcion-instalacion">
+                        Ambiente cómodo para la planificación de clases, reuniones 
+                        y descanso del personal docente.
+                    </p>
+                    <span class="etiqueta-categoria">Servicios</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal para vista ampliada -->
+        <div class="modal" id="modal-imagen">
+            <div class="modal-contenido">
+                <span class="modal-cerrar" id="modal-cerrar">&times;</span>
+                <img src="" alt="" class="modal-imagen" id="modal-imagen-src">
+                <div class="modal-info">
+                    <h3 class="modal-titulo" id="modal-titulo"></h3>
+                    <p id="modal-descripcion"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botones de Redes Sociales -->
+    <div class="redes-sociales">
+        <div class="red-social">
+            <div class="red-social-texto">Facebook</div>
+            <a href="https://www.facebook.com/people/Liceo-Nacional-Bolivariano-Padre-de-las-Casas/100068191717075/" target="_blank" class="red-social-icono facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="red-social">
+            <div class="red-social-texto">Instagram</div>
+            <a href="https://www.instagram.com/lbpadredelascasas/" target="_blank" class="red-social-icono instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="cintillo-inferior">
+        <div class="ticker-container">
+            <div class="ticker-content">
+                <span>📍 Dirección: Carrera 2 entre calle 5, Barquisimeto 3001, Lara</span>
+                <span>✉️ Email: Lnbpc1969@gmail.com</span>
+                <span>💡 "Calidad Educativa lascasiana"</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/inicio.js"></script>
+    <script src="js/instalaciones.js"></script>
+</body>
+</html>

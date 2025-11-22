@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Liceo Padre de las Casas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <section class="carrusel">
+        <div class="carrusel-imagenes">
+            <div class="carrusel-item active">
+                <img src="img/Inicio/1.jpeg" alt="Imagen Liceo 1">
+            </div>
+            <div class="carrusel-item">
+                <img src="img/Inicio/2.jpeg" alt="Imagen Liceo 2">
+            </div>
+            <div class="carrusel-item">
+                <img src="img/Inicio/3.png" alt="Imagen Liceo 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Franja superior con texto animado -->
+    <div class="franja-superior">
+        <div class="texto-animado">
+            <div class="titulo-movil">
+                CONTACTO - LICEO PADRE DE LAS CASAS
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-link">INICIO</a>
+                <a href="quienes-somos.html" class="nav-link">¿QUIÉNES SOMOS?</a>
+                <a href="actividades-escolares.html" class="nav-link">ACTIVIDADES ESCOLARES</a> 
+            </div>
+
+            <div class="nav-wrapper">
+                <img src="img/0.webp" alt="Logo Liceo Padre de las Casas" class="central-logo">
+            </div>
+            
+            <div class="nav-links-right">
+                <a href="instalaciones.html" class="nav-link">INSTALACIONES</a>
+                <a href="admision.html" class="nav-link">ADMISIÓN</a>
+                <a href="contacto.html" class="nav-link">CONTACTO</a>
+                <a href="ayuda.html" class="nav-link">AYUDA</a>
+            </div>
+            
+            <!-- Menú hamburguesa para móviles -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div> 
+        
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">INICIO</a>
+            <a href="quienes-somos.html" class="mobile-nav-link">¿QUIÉNES SOMOS?</a>
+            <a href="actividades-escolares.html" class="mobile-nav-link">ACTIVIDADES ESCOLARES</a>
+            <a href="instalaciones.html" class="mobile-nav-link">INSTALACIONES</a>
+            <a href="admision.html" class="mobile-nav-link">ADMISIÓN</a>
+            <a href="contacto.html" class="mobile-nav-link">CONTACTO</a>
+            <a href="ayuda.html" class="mobile-nav-link">AYUDA</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <h1 class="titulo-contacto">Contáctanos</h1>
+        
+        <p class="descripcion-contacto">
+            Estamos aquí para responder todas tus preguntas. Ponte en contacto con nosotros a través 
+            de cualquiera de nuestros canales de comunicación o utiliza el formulario para enviarnos un mensaje directo.
+        </p>
+
+        <!-- Sección de Información de Contacto -->
+        <section class="informacion-contacto">
+            <div class="contacto-card">
+                <div class="contacto-icono">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Dirección</h3>
+                <p>Carrera 2 entre calle 5<br>Barquisimeto 3001, Lara</p>
+                <a href="https://maps.app.goo.gl/7GvhYZYnMyjvEyJh6" target="_blank" class="contacto-btn">Ir</a>
+            </div>
+            
+            <div class="contacto-card">
+                <div class="contacto-icono">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>Lnbpc1969@gmail.com</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank" class="contacto-btn">Enviar email</a>
+            </div>
+            
+            <div  class="contacto-card">
+                <div class="contacto-icono">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Horarios de Clases</h3>
+                <p>Por secciones</p>
+                <a href="actividades-escolares.html#horarios-de-clases" class="contacto-btn">Ir</a>
+            </div>
+        </section>
+
+        <section class="formulario-redes">
+            <div class="formulario-container">
+                <h2>Envíanos un Mensaje</h2>
+                <form id="formulario-contacto" class="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="admision">Admisión y Matrícula</option>
+                            <option value="informacion">Información General</option>
+                            <option value="academico">Asuntos Académicos</option>
+                            <option value="disciplina">Asuntos Disciplinarios</option>
+                            <option value="sugerencia">Sugerencias</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+            
+        <!-- Sección Mapa -->
+        <section class="mapa-ubicacion">
+            <h2>Ubicación del Liceo</h2>
+            <h3>CARRERA 2 ENTRE CALLES 3 Y 5 SECTOR BRISAS DEL OBELISCO</h3>
+            <div class="mapa-container">
+                <a href="https://maps.app.goo.gl/7GvhYZYnMyjvEyJh6"   target="_blank" class="mapa-miniatura">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3928.4628860478406!2d-69.3594563!3d10.0611057!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e876694d2555555%3A0x66ddfd260bd0db8a!2sLiceo%20Bolivariano%20Padre%20de%20las%20Casas!5e0!3m2!1ses!2sve!4v1762386940408!5m2!1ses!2sve" allowfullscreen="" loading="lazy"></iframe>
+                </a> 
+            </div>
+            <br>
+            <h3>Mini Mapa</h3>
+        </section>
+    </main>
+
+    <!-- Botones de Redes Sociales -->
+    <div class="redes-sociales">
+        <div class="red-social">
+            <div class="red-social-texto">Facebook</div>
+            <a href="https://www.facebook.com/people/Liceo-Nacional-Bolivariano-Padre-de-las-Casas/100068191717075/" target="_blank" class="red-social-icono facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="red-social">
+            <div class="red-social-texto">Instagram</div>
+            <a href="https://www.instagram.com/lbpadredelascasas/" target="_blank" class="red-social-icono instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="cintillo-inferior">
+        <div class="ticker-container">
+            <div class="ticker-content">
+                <span>📍 Dirección: Carrera 2 entre calle 5, Barquisimeto 3001, Lara</span>
+                <span>✉️ Email: Lnbpc1969@gmail.com</span>
+                <span>💡 "Calidad Educativa lascasiana"</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/inicio.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>

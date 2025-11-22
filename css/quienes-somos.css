@@ -1,0 +1,467 @@
+/* Estilos para el texto animado sobre el menú */
+.franja-superior {
+    position: relative;
+    height: 40px;
+    background-color: transparent;
+    overflow: hidden;
+    margin-top: -30px;
+    margin-bottom: -10px;
+    z-index: 10;
+}
+
+.texto-animado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+
+.titulo-movil {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--azul);
+    white-space: nowrap;
+    animation: moverTitulo 20s linear infinite;
+    text-shadow: 2px 2px 0 var(--amarillo);
+    margin-top: -17px;
+}
+
+@keyframes moverTitulo {
+    0% {
+        transform: translateX(100vw); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Ajustes para el navbar */
+.navbar {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos para el menú fijo */
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: slideDown 0.5s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste para el contenido cuando el menú está fijo */
+.navbar.fixed + .main-content {
+    margin-top: 120px; /* Altura aproximada del navbar */
+}
+
+/* Estilos adicionales específicos para la página Quiénes Somos */
+.mision-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.mision, .vision {
+    background: var(--blanco);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mision:hover, .vision:hover {
+    transform: translateY(-10px);
+}
+
+.mision {
+    border-top: 5px solid var(--azul);
+}
+
+.vision {
+    border-top: 5px solid var(--verde-manzana);
+}
+
+.mision h2, .vision h2 {
+    color: var(--rojo);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--amarillo);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.mision p, .vision p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.equipo-directivo {
+    background: var(--gris-claro);
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+
+.equipo-directivo h2 {
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--amarillo);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.miembros-equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.miembro {
+    background: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.miembro:hover {
+    transform: translateY(-10px);
+}
+
+.miembro-img {
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--azul-claro), var(--verde-manzana));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.miembro-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.miembro-info h3 {
+    color: var(--azul);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.miembro-info .cargo {
+    color: var(--rojo);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.miembro-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.logros-historicos {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.logros-historicos h2 {
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--amarillo);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.linea-tiempo {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.linea-tiempo::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--amarillo);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.evento-tiempo {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
+}
+
+.evento-tiempo:nth-child(odd) {
+    left: 0;
+}
+
+.evento-tiempo:nth-child(even) {
+    left: 50%;
+}
+
+.evento-tiempo::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--blanco);
+    border: 4px solid var(--rojo);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.evento-tiempo:nth-child(odd)::after {
+    right: -10px;
+}
+
+.evento-tiempo:nth-child(even)::after {
+    left: -10px;
+}
+
+.contenido-evento {
+    padding: 20px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--verde-manzana);
+}
+
+.contenido-evento h3 {
+    color: var(--rojo);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.contenido-evento .fecha {
+    color: var(--azul);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.contenido-evento p {
+    line-height: 1.6;
+}
+
+/* Responsive mejorado */
+@media (max-width: 900px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .nav-left, .nav-links-right {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-wrapper {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+    
+    .central-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .mision-vision {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .mision, .vision {
+        padding: 1.5rem;
+    }
+    
+    .mision h2, .vision h2 {
+        font-size: 1.5rem;
+    }
+    
+    .mision p, .vision p {
+        font-size: 1rem;
+    }
+    
+    .equipo-directivo {
+        padding: 2rem 1rem;
+    }
+    
+    .equipo-directivo h2 {
+        font-size: 1.8rem;
+    }
+    
+    .miembros-equipo {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .miembro-img {
+        height: 200px;
+        font-size: 1rem;
+    }
+    
+    .miembro-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .miembro-info .cargo {
+        font-size: 1rem;
+    }
+    
+    .logros-historicos {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+    
+    .logros-historicos h2 {
+        font-size: 1.8rem;
+    }
+    
+    .linea-tiempo::before {
+        left: 31px;
+    }
+    
+    .evento-tiempo {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .evento-tiempo:nth-child(even) {
+        left: 0;
+    }
+    
+    .evento-tiempo::after {
+        left: 21px;
+    }
+    
+    .evento-tiempo:nth-child(odd)::after,
+    .evento-tiempo:nth-child(even)::after {
+        left: 21px;
+    }
+    
+    .titulo-movil {
+        font-size: 1.1rem;
+    }
+    
+    .franja-superior {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+        height: 100px;
+    }
+    
+    .central-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .mision, .vision {
+        padding: 1rem;
+    }
+    
+    .mision h2, .vision h2 {
+        font-size: 1.3rem;
+    }
+    
+    .mision p, .vision p {
+        font-size: 0.9rem;
+    }
+    
+    .equipo-directivo h2 {
+        font-size: 1.5rem;
+    }
+    
+    .miembro-img {
+        height: 180px;
+        font-size: 0.9rem;
+    }
+    
+    .miembro-info {
+        padding: 1rem;
+    }
+    
+    .miembro-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .miembro-info .cargo {
+        font-size: 0.9rem;
+    }
+    
+    .miembro-info p {
+        font-size: 0.9rem;
+    }
+    
+    .logros-historicos h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contenido-evento {
+        padding: 15px;
+    }
+    
+    .contenido-evento h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contenido-evento p {
+        font-size: 0.9rem;
+    }
+    
+    .titulo-movil {
+        font-size: 0.9rem;
+        margin-top: -15px;
+    }
+    
+    .franja-superior {
+        height: 30px;
+    }
+}

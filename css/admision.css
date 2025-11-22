@@ -1,0 +1,653 @@
+/* Estilos específicos para la página de admisión */
+
+.titulo-admision {
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--azul);
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--amarillo);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.descripcion-admision {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Proceso de Admisión - Línea de Tiempo */
+.proceso-admision {
+    padding: 3rem 2rem;
+    background: var(--blanco);
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    max-width: 1200px;
+}
+
+.proceso-admision h2 {
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.linea-tiempo {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.linea-tiempo::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--azul), var(--verde-manzana));
+    border-radius: 2px;
+}
+
+.paso {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.paso:last-child {
+    margin-bottom: 0;
+}
+
+.paso-numero {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, var(--azul), var(--verde-manzana));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -5rem;
+    border: 4px solid var(--blanco);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.paso-contenido {
+    background: var(--gris-claro);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    flex: 1;
+    border-left: 4px solid var(--amarillo);
+    transition: all 0.3s ease;
+}
+
+.paso-contenido:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.paso-contenido h3 {
+    color: var(--azul);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.paso-contenido p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.paso-fecha {
+    color: var(--verde-manzana);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Requisitos de Admisión */
+.requisitos-admision {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--azul-claro), var(--azul));
+    color: var(--blanco);
+    margin: 2rem 0;
+}
+
+.requisitos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.requisitos-container h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--amarillo);
+}
+
+.requisitos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.requisito-categoria {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.requisito-categoria h3 {
+    color: var(--amarillo);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.requisito-categoria ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.requisito-categoria li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.requisito-categoria li::before {
+    content: "✓";
+    color: var(--amarillo);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.requisito-categoria li:last-child {
+    border-bottom: none;
+}
+
+/* Formularios de Admisión */
+.formularios-admision {
+    padding: 3rem 2rem;
+    background: var(--blanco);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.formularios-container h2 {
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.formularios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.formulario-card {
+    background: var(--gris-claro);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--verde-manzana);
+}
+
+.formulario-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.formulario-icono {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--azul), var(--verde-manzana));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.formulario-card h3 {
+    color: var(--azul);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.formulario-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.btn-formulario {
+    width: 100%;
+    background: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-formulario:hover {
+    background: var(--verde-manzana);
+    transform: translateY(-2px);
+}
+
+.descargas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn-descarga {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--blanco);
+    color: var(--azul);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--azul);
+}
+
+.btn-descarga:hover {
+    background: var(--azul);
+    color: var(--blanco);
+    transform: translateX(5px);
+}
+
+/* Costos y Becas */
+.costos-becas {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--verde-manzana), var(--azul));
+    color: var(--blanco);
+    margin: 2rem 0;
+}
+
+.costos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.costos-info h2,
+.becas-info h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--amarillo);
+}
+
+.costos-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.costo-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.costo-item h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.monto {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--amarillo);
+    margin-bottom: 0.5rem;
+}
+
+.costo-item p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+}
+
+.becas-content {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.becas-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.becas-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.becas-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.becas-content li::before {
+    content: "🎓";
+    position: absolute;
+    left: 0;
+}
+
+.becas-content li:last-child {
+    border-bottom: none;
+}
+
+.btn-beca {
+    width: 100%;
+    background: var(--amarillo);
+    color: var(--azul);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-beca:hover {
+    background: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* Preguntas Frecuentes */
+.preguntas-frecuentes {
+    padding: 3rem 2rem;
+    background: var(--blanco);
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.preguntas-frecuentes h2 {
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 2px solid var(--gris-claro);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-pregunta {
+    padding: 1.5rem;
+    background: var(--gris-claro);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-pregunta:hover {
+    background: #e9ecef;
+}
+
+.faq-pregunta h3 {
+    color: var(--azul);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.faq-pregunta i {
+    color: var(--azul);
+    transition: transform 0.3s ease;
+}
+
+.faq-respuesta {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-respuesta {
+    padding: 1.5rem;
+    max-height: 200px;
+}
+
+.faq-item.active .faq-pregunta i {
+    transform: rotate(180deg);
+}
+
+.faq-respuesta p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Modal */
+.modal-admision {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-admision.mostrar {
+    display: flex;
+}
+
+.modal-contenido {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--azul);
+}
+
+/* Responsive para Admisión */
+@media (max-width: 1024px) {
+    .costos-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .linea-tiempo {
+        padding-left: 2rem;
+    }
+    
+    .paso-numero {
+        left: -3.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .proceso-admision,
+    .requisitos-admision,
+    .formularios-admision,
+    .costos-becas,
+    .preguntas-frecuentes {
+        padding: 2rem 1rem;
+    }
+    
+    .titulo-admision {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    
+    .descripcion-admision {
+        font-size: 1rem;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .linea-tiempo {
+        padding-left: 1rem;
+    }
+    
+    .linea-tiempo::before {
+        left: 0.5rem;
+    }
+    
+    .paso-numero {
+        left: -2.5rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+    
+    .paso-contenido {
+        padding: 1rem;
+        margin-left: 0.5rem;
+    }
+    
+    .paso-contenido h3 {
+        font-size: 1.1rem;
+    }
+    
+    .formularios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .requisitos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .requisito-categoria {
+        padding: 1.5rem;
+    }
+    
+    .requisito-categoria h3 {
+        font-size: 1.1rem;
+    }
+    
+    .faq-pregunta h3 {
+        font-size: 1rem;
+    }
+    
+    .faq-pregunta {
+        padding: 1rem;
+    }
+    
+    .faq-respuesta {
+        padding: 0 1rem;
+    }
+    
+    .faq-item.active .faq-respuesta {
+        padding: 1rem;
+    }
+    
+    .modal-contenido {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-admision {
+        font-size: 1.8rem;
+    }
+    
+    .proceso-admision h2,
+    .requisitos-container h2,
+    .preguntas-frecuentes h2 {
+        font-size: 1.6rem;
+    }
+    
+    .linea-tiempo {
+        padding-left: 0.5rem;
+    }
+    
+    .paso-numero {
+        left: -2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .paso-contenido {
+        padding: 0.8rem;
+    }
+    
+    .requisito-categoria {
+        padding: 1rem;
+    }
+    
+    .requisito-categoria li {
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+    }
+    
+    .faq-pregunta h3 {
+        font-size: 0.9rem;
+    }
+    
+    .faq-respuesta p {
+        font-size: 0.9rem;
+    }
+}
